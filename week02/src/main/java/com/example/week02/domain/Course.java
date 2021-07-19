@@ -27,6 +27,11 @@ public class Course extends Timestamped {
     // setter는 설정하지 않음.
 
 
+    public Course(CourseRequestDto requestDto){
+        this.title = requestDto.getTitle();
+        this.tutor = requestDto.getTutor();
+    }
+
     public Course(String title, String tutor) {
         this.title = title;
         this.tutor = tutor;
