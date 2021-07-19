@@ -58,7 +58,7 @@ public class Week02Application {
             );
 
             // delete
-            repository.deleteAll();
+          //  repository.deleteAll();
 
         };
     }
