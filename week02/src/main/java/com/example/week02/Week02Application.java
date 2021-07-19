@@ -2,6 +2,7 @@ package com.example.week02;
 
 import com.example.week02.domain.Course;
 import com.example.week02.domain.CourseRepository;
+import com.example.week02.domain.CourseRequestDto;
 import com.example.week02.service.CourseService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -37,8 +38,11 @@ public class Week02Application {
             }
 
             // 기존의 데이터 변 - update
-            Course new_course = new Course("웹개발의 봄 Spring", "임민영");
-            courseService.update(1L, new_course);
+            //Course new_course = new Course("웹개발의 봄 Spring", "임민영");
+
+            CourseRequestDto requestDto = new CourseRequestDto("웹개발의 봄 Spring", "임민영");
+
+            courseService.update(1L, requestDto);
             courseList = repository.findAll();
             for (int i = 0; i < courseList.size(); i++) {
                 Course course = courseList.get(i);
